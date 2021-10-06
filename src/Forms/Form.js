@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-//import { v4 as uuidv4 } from 'uuid';
+import { connect } from 'react-redux';
+import * as actions from '../Redux/action';
 
 class Form extends Component {
   state = {
@@ -61,5 +62,8 @@ class Form extends Component {
     );
   }
 }
+const mapDispatchToProps = dispatch => ({
+  onSubmit: text => dispatch(actions.saveAction(text)),
+});
 
-export default Form;
+export default connect(null, mapDispatchToProps)(Form);
