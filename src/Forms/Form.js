@@ -16,7 +16,15 @@ class Form extends Component {
   handleSubmit = event => {
     event.preventDefault();
 
-    this.props.onSubmit(this.state);
+    const { items, onSubmit } = this.props;
+    const { name } = this.state;
+
+    if (items.some(item => item.name === name)) {
+      alert(`${name} already exist in contact list`);
+      return;
+    }
+
+    onSubmit(this.state);
 
     this.resetForm();
   };
@@ -63,8 +71,12 @@ class Form extends Component {
   }
 }
 
+const mapStateToProps = state => ({
+  items: state.contacts.items,
+});
+
 const mapDispatchToProps = dispatch => ({
   onSubmit: text => dispatch(actions.saveAction(text)),
 });
 
-export default connect(null, mapDispatchToProps)(Form);
+export default connect(mapStateToProps, mapDispatchToProps)(Form);
