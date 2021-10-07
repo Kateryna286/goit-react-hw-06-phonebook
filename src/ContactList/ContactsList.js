@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../Redux/action';
+import * as actions from '../Redux/contacts/contacts-actions';
 import './ContactList.css';
 
 function ContactsList({ contacts, onDeleteContact }) {
@@ -14,7 +14,6 @@ function ContactsList({ contacts, onDeleteContact }) {
           </span>
 
           <button
-            //id={contact.id}
             type="button"
             onClick={() => onDeleteContact(id)}
             className="button"

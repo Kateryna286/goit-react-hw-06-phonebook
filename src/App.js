@@ -1,9 +1,8 @@
 import React from 'react';
-
-import './App.css';
 import ContactsList from './ContactList/ContactsList';
 import Filter from './Filter/Filter';
 import Form from './Forms/Form';
+import './App.css';
 
 function App() {
   return (

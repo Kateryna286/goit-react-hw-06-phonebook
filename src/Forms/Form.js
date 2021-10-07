@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import * as actions from '../Redux/action';
+import * as actions from '../Redux/contacts/contacts-actions';
 
 class Form extends Component {
   state = {
@@ -62,6 +62,7 @@ class Form extends Component {
     );
   }
 }
+
 const mapDispatchToProps = dispatch => ({
   onSubmit: text => dispatch(actions.saveAction(text)),
 });
