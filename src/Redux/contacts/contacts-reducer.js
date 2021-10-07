@@ -10,10 +10,10 @@ const itemsInitialState = [
 
 const itemsReducer = (state = itemsInitialState, { type, payload }) => {
   switch (type) {
-    case actionTypes.CREATION:
+    case actionTypes.ADD:
       return [...state, payload];
 
-    case actionTypes.DELETION:
+    case actionTypes.DELETE:
       return state.filter(item => item.id !== payload);
 
     default:
@@ -23,7 +23,7 @@ const itemsReducer = (state = itemsInitialState, { type, payload }) => {
 
 const filterReducer = (state = '', { type, payload }) => {
   switch (type) {
-    case actionTypes.UPDATION:
+    case actionTypes.UPDATE:
       return payload;
 
     default:

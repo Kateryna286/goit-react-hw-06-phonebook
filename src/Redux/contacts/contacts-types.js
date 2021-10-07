@@ -1,3 +1,3 @@
-export const CREATION = 'phonebook/Create';
-export const DELETION = 'phonebook/Delete';
-export const UPDATION = 'phonebook/UpdateFilter';
+export const ADD = 'phonebook/Add';
+export const DELETE = 'phonebook/Delete';
+export const UPDATE = 'phonebook/UpdateFilter';

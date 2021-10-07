@@ -2,7 +2,7 @@ import * as actionTypes from './contacts-types';
 import { v4 as uuidv4 } from 'uuid';
 
 export const saveAction = data => ({
-  type: actionTypes.CREATION,
+  type: actionTypes.ADD,
   payload: {
     id: uuidv4(),
     name: data.name,
@@ -11,11 +11,11 @@ export const saveAction = data => ({
 });
 
 export const deleteAction = contactID => ({
-  type: actionTypes.DELETION,
+  type: actionTypes.DELETE,
   payload: contactID,
 });
 
 export const updateFilter = value => ({
-  type: actionTypes.UPDATION,
+  type: actionTypes.UPDATE,
   payload: value,
 });
