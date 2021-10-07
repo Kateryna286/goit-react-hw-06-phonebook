@@ -16,6 +16,6 @@ export const deleteAction = contactID => ({
 });
 
 export const updateFilter = value => ({
-  type: actionTypes.UPDATE,
+  type: actionTypes.UPDATE_FILTER,
   payload: value,
 });

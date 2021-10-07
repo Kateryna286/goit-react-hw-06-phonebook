@@ -23,7 +23,7 @@ const itemsReducer = (state = itemsInitialState, { type, payload }) => {
 
 const filterReducer = (state = '', { type, payload }) => {
   switch (type) {
-    case actionTypes.UPDATE:
+    case actionTypes.UPDATE_FILTER:
       return payload;
 
     default:
