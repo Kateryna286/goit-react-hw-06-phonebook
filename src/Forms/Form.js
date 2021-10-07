@@ -76,7 +76,7 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onSubmit: text => dispatch(actions.saveAction(text)),
+  onSubmit: value => dispatch(actions.saveAction(value)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Form);
